@@ -347,7 +347,7 @@ table.mt td{padding:6px;border-bottom:1px solid var(--hair);color:var(--ink);fon
       <div class="tl-item open">
         <button class="tl-head"><div><div class="tl-role">Consultant · Payments &amp; Order-to-Cash</div><div class="tl-org">HighRadius (Fintech SaaS), Hyderabad</div></div><div class="tl-dates">Apr 2025 – Present<span class="tl-ico">+</span></div></button>
         <div class="tl-body"><div><ul>
-          <li><b>Launched a centralized payments portal for 2 US banks</b> (Wells Fargo, Bank of America via Fiserv), automating transaction processing and reducing manual reconciliation, by leading discovery, mapping As-Is/To-Be payment flows and writing the BRD, user stories and acceptance criteria.</li>
+          <li><b>Implemented the EIPP (Electronic Invoice Presentment &amp; Payment) product for enterprise clients</b> including NCS, ResMed, WWEX, Corpay and GEHC, by leading discovery, mapping As-Is/To-Be payment flows and writing the BRD, user stories and acceptance criteria.</li>
           <li><b>Delivered 100% of release milestones on time</b> by prioritizing the backlog with the product owner, planning releases and tracking scope, risks, issues and dependencies in a RAID log.</li>
           <li><b>Shipped defect-free releases with business sign-off on every one</b> by writing UAT test cases, leading SIT and UAT with business users and triaging defects with engineering.</li>
           <li><b>Eliminated data silos between ERP, banking and finance systems</b> by designing SQL-based integrations and ETL source-to-target mappings and validating API payloads in Postman.</li>
@@ -394,9 +394,9 @@ const V = {
   flow: `<div class="mv"><div class="mv-h">As-Is</div>
     <div class="flow"><div class="node">ERP</div><span class="arr">→</span><div class="node bad">Manual recon</div><span class="arr">→</span><div class="node bad">Email / files</div><span class="arr">→</span><div class="node">Bank</div></div>
     <div class="mv-h" style="margin-top:6px">To-Be</div>
-    <div class="flow"><div class="node">ERP</div><span class="arr">→</span><div class="node hi">Payments portal</div><span class="arr">→</span><div class="node">Fiserv</div></div>
-    <div class="flow" style="padding-left:50%"><div class="node">Wells Fargo</div><div class="node">BofA</div></div>
-    <div class="box" style="margin-top:auto;display:flex;gap:8px;align-items:center"><span class="tag ok">AUTOMATED</span> Transaction processing &amp; reconciliation</div></div>`,
+    <div class="flow"><div class="node">ERP</div><span class="arr">→</span><div class="node hi">EIPP portal</div><span class="arr">→</span><div class="node">Customers</div></div>
+    <div class="flow" style="padding-left:50%"><div class="node">View invoices</div><div class="node">Pay online</div></div>
+    <div class="box" style="margin-top:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="tag ok">CLIENTS</span> NCS · ResMed · WWEX · Corpay · GEHC</div></div>`,
   rollout: `<div class="mv"><div class="phase"><span></span>${['Disc','BRD','Config','UAT','Live','Care'].map(x=>`<span class="mv-h" style="font-size:8.5px;letter-spacing:.04em;text-align:center">${x}</span>`).join('')}</div>
     ${['Bank A','Bank B','Bank C','Insurer'].map(n=>`<div class="phase"><b>${n}</b><s class="d"></s><s class="d"></s><s class="d"></s><s class="d"></s><s class="g"></s><s></s></div>`).join('')}
     <div class="box" style="margin-top:auto;display:flex;gap:8px;align-items:center"><span class="tag ok">4 / 4 LIVE</span> 3 banks · 1 health insurer</div></div>`,
@@ -422,12 +422,12 @@ const V = {
 };
 
 const CASES = [
-  { id:'payments', tag:'Payments', vis:'flow', title:'Payments portal for two US banks', dom:'Fintech SaaS · Payments · O2C',
-    blurb:'A centralized payments portal for Wells Fargo and Bank of America (via Fiserv) that automates transaction processing and cuts manual reconciliation.',
-    facts:[['Company','HighRadius'],['Role','Consultant / BA'],['Timeline','2025 – present']],
-    problem:'Payment and order-to-cash processes depended on manual reconciliation and file handoffs between ERP, finance teams and bank channels.',
-    steps:[['Led product discovery','with business and finance stakeholders to understand how payments actually flowed.'],['Mapped As-Is and To-Be payment flows','to show where manual work and reconciliation gaps sat.'],['Wrote the BRD, user stories and acceptance criteria','that engineering built against.'],['Ran SIT and UAT','with business users and triaged defects with engineering through to sign-off.']],
-    outcome:'Portal launched for 2 US banks, with transaction processing automated and manual reconciliation reduced.',
+  { id:'payments', tag:'EIPP', vis:'flow', title:'EIPP for enterprise clients', dom:'Fintech SaaS · EIPP · Order-to-Cash',
+    blurb:'Implemented HighRadius’s EIPP (Electronic Invoice Presentment &amp; Payment) product for enterprise clients including NCS, ResMed, WWEX, Corpay and GEHC.',
+    facts:[['Company','HighRadius'],['Role','Consultant / BA'],['Clients','NCS · ResMed · WWEX · Corpay · GEHC']],
+    problem:'Each client’s invoicing and payment collection relied on manual steps and handoffs between ERP, finance teams and their customers.',
+    steps:[['Led discovery','with each client’s business and finance stakeholders to understand how invoices and payments actually flowed.'],['Mapped As-Is and To-Be invoice-to-payment flows','to show where manual work and reconciliation gaps sat.'],['Wrote the BRD, user stories and acceptance criteria','for each client’s EIPP configuration and integrations.'],['Ran SIT and UAT','with business users and triaged defects with engineering through to sign-off.']],
+    outcome:'EIPP implemented for NCS, ResMed, WWEX, Corpay and GEHC, replacing manual invoice and payment steps.',
     tools:['BRD','User Stories','As-Is/To-Be','UAT','SIT','Postman','SQL']},
   { id:'crm', tag:'CRM', vis:'rollout', title:'Four enterprise CRM go-lives', dom:'Banking · Insurance · CRM',
     blurb:'Took CRM live for South Indian Bank, RBL Bank, ADIB and Niva Bupa, owning requirements from discovery through go-live and hypercare.',
@@ -441,7 +441,7 @@ const CASES = [
     facts:[['Artefacts','BRD · FRD · FSD'],['Scope','All 5 go-lives'],['Format','Stories + AC']],
     problem:'Engineering, QA and the client need a single, unambiguous description of what will be built and how it will be accepted.',
     steps:[['Elicited requirements','through workshops, interviews and walkthroughs of current processes.'],['Modelled As-Is/To-Be processes','so stakeholders could agree on the future state.'],['Wrote BRDs and FRDs/FSDs','that turned business needs into build-ready specifications.'],['Broke scope into user stories','with testable acceptance criteria for each sprint.']],
-    outcome:'Authored the BRDs, FRDs/FSDs and gap analyses behind all 4 CRM implementations and the HighRadius payments portal.',
+    outcome:'Authored the BRDs, FRDs/FSDs and gap analyses behind all 4 CRM implementations and the HighRadius EIPP rollouts.',
     tools:['BRD','FRD/FSD','User Stories','Acceptance Criteria','Process Mapping']},
   { id:'uat', tag:'Quality', vis:'uat', title:'UAT that earns sign-off', dom:'Testing · Release',
     blurb:'Writing UAT test cases, running SIT and UAT with business users, and tracking every defect to closure.',
