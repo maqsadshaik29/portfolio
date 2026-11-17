@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>Maqsad Shaik · Business Analyst</title>
+<meta name="description" content="Maqsad Shaik, Business Analyst for banking, insurance and fintech SaaS. 5 enterprise go-lives in 5.5 years, from requirements to UAT sign-off and launch."/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Maqsad Shaik · Business Analyst · BFSI, Fintech SaaS & CRM"/>
+<meta property="og:description" content="5 enterprise go-lives in 5.5 years. Requirements, process design, data mapping and UAT for banks, insurers and fintech platforms."/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.25' y='1.25' width='29.5' height='29.5' rx='7' fill='%23F8F7F3' stroke='%2314203A' stroke-width='1.5'/%3E%3Ctext x='16' y='21.4' font-family='Helvetica,Arial,sans-serif' font-size='13.5' font-weight='700' fill='%2314203A' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --sans:'Manrope','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --serif:'Instrument Serif',Georgia,serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --bg:#F8F7F3; --bg2:#F0EEE7; --ink:#14203A; --ink2:rgba(20,32,58,.68); --ink3:rgba(20,32,58,.42);
+  --accent:#2D5BA8; --accent-dim:rgba(45,91,168,.10); --accent-mid:rgba(45,91,168,.28);
+  --amber:#B8782A; --amber-dim:rgba(184,120,42,.12);
+  --ok:#2F7A55; --ok-dim:rgba(47,122,85,.12); --warn:#B5552F;
+  --hair:rgba(20,32,58,.10); --hair2:rgba(20,32,58,.18);
+  --panel:#FFFFFF; --panel2:#F6F5F0; --chrome:rgba(248,247,243,.84);
+  --shadow:0 34px 80px -26px rgba(20,32,58,.26),0 14px 36px -22px rgba(20,32,58,.18);
+  --grid:rgba(20,32,58,.055);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1220; --bg2:#111829; --ink:#E9EEF8; --ink2:rgba(233,238,248,.66); --ink3:rgba(233,238,248,.38);
+    --accent:#7FA7EA; --accent-dim:rgba(127,167,234,.13); --accent-mid:rgba(127,167,234,.32);
+    --amber:#E2AE5C; --amber-dim:rgba(226,174,92,.13);
+    --ok:#67C095; --ok-dim:rgba(103,192,149,.14); --warn:#E58C66;
+    --hair:rgba(233,238,248,.10); --hair2:rgba(233,238,248,.20);
+    --panel:#131B2D; --panel2:#0F1625; --chrome:rgba(12,18,32,.78);
+    --shadow:0 32px 80px -20px rgba(0,0,0,.65),0 8px 24px -12px rgba(0,0,0,.45);
+    --grid:rgba(233,238,248,.045);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1220; --bg2:#111829; --ink:#E9EEF8; --ink2:rgba(233,238,248,.66); --ink3:rgba(233,238,248,.38);
+  --accent:#7FA7EA; --accent-dim:rgba(127,167,234,.13); --accent-mid:rgba(127,167,234,.32);
+  --amber:#E2AE5C; --amber-dim:rgba(226,174,92,.13);
+  --ok:#67C095; --ok-dim:rgba(103,192,149,.14); --warn:#E58C66;
+  --hair:rgba(233,238,248,.10); --hair2:rgba(233,238,248,.20);
+  --panel:#131B2D; --panel2:#0F1625; --chrome:rgba(12,18,32,.78);
+  --shadow:0 32px 80px -20px rgba(0,0,0,.65),0 8px 24px -12px rgba(0,0,0,.45);
+  --grid:rgba(233,238,248,.045);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow:hidden;transition:background .5s var(--ease),color .5s var(--ease)}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+/* background grid */
+.bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:96px 96px;background-position:center center;
+  mask-image:radial-gradient(ellipse at center,#000 30%,transparent 85%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 85%)}
+.bg-glow{position:fixed;inset:-20%;z-index:0;pointer-events:none;
+  background:radial-gradient(circle at 25% 20%,var(--accent-dim),transparent 40%),radial-gradient(circle at 80% 85%,var(--amber-dim),transparent 40%)}
+
+/* intro */
+#intro{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:var(--bg);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+#intro.gone{opacity:0;transform:scale(1.04);pointer-events:none}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink2);font-weight:600}
+.intro-name{font-family:var(--sans);font-weight:400;font-size:clamp(56px,11vw,128px);line-height:.95;letter-spacing:-.035em;margin:22px 0 26px}
+.intro-name em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);letter-spacing:-.01em}
+.intro-sub{font-size:clamp(15px,2vw,19px);color:var(--ink2)}
+.intro-rule{width:56px;height:1px;background:var(--amber);margin:26px auto}
+.intro-tag{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3)}
+.intro-actions{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-size:13.5px;font-weight:600;border:1px solid var(--hair2);transition:all .25s var(--ease)}
+.btn:hover{transform:translateY(-1px);border-color:var(--accent-mid)}
+.btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.btn.primary:hover{box-shadow:0 10px 26px -10px var(--accent)}
+.intro-name span,.intro-sub,.intro-rule,.intro-tag,.intro-actions,#intro .eyebrow{opacity:0;transform:translateY(14px);animation:rise .9s var(--ease) forwards}
+#intro .eyebrow{animation-delay:.1s}.intro-name span:nth-child(1){animation-delay:.25s;display:inline-block}.intro-name span:nth-child(3){animation-delay:.4s;display:inline-block}
+.intro-sub{animation-delay:.6s}.intro-rule{animation-delay:.75s}.intro-tag{animation-delay:.85s}.intro-actions{animation-delay:1s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* topbar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:20px 28px;gap:12px}
+.brand b{display:block;font-size:15px;font-weight:600;letter-spacing:-.01em}
+.brand small{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink3);margin-top:3px}
+.topbar-right{display:flex;align-items:center;gap:10px}
+.seg{display:flex;padding:3px;border:1px solid var(--hair2);border-radius:999px;background:var(--chrome);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.seg button{padding:7px 14px;border-radius:999px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--ink3);transition:all .25s}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.icon-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--hair2);display:grid;place-items:center;background:var(--chrome);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:border-color .25s}
+.icon-btn:hover,.pill-btn:hover{border-color:var(--accent-mid)}
+.icon-btn svg{width:16px;height:16px}
+.pill-btn{padding:10px 18px;border-radius:999px;border:1px solid var(--hair2);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;background:var(--chrome);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+
+/* stage */
+main{position:relative;z-index:1;height:100%}
+.view{position:absolute;inset:0;transition:opacity .5s var(--ease)}
+.view.hidden{opacity:0;pointer-events:none}
+
+/* card deck */
+#deck{display:flex;align-items:center;justify-content:center;padding:92px 16px 70px}
+.deck-wrap{position:relative;width:min(470px,100%);height:min(640px,100%)}
+.card{position:absolute;inset:0;background:var(--panel);border:1px solid var(--hair);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .7s var(--ease),opacity .6s var(--ease);will-change:transform}
+.card.prev{transform:translateX(-118%) rotate(-7deg);opacity:0;pointer-events:none}
+.card.next{transform:translateY(16px) scale(.94);opacity:.55;pointer-events:none;z-index:0}
+.card.next2{transform:translateY(30px) scale(.88);opacity:.25;pointer-events:none;z-index:-1}
+.card.far{transform:translateY(40px) scale(.84);opacity:0;pointer-events:none;z-index:-2}
+.card.cur{z-index:2}
+.card-vis{flex:1 1 auto;min-height:0;background:var(--panel2);border-bottom:1px solid var(--hair);position:relative;overflow:hidden;padding:22px}
+.card-body{padding:22px 26px 20px}
+.idx{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--ink3)}
+.idx i{font-style:normal;padding:3px 8px;border-radius:6px;background:var(--accent-dim);color:var(--accent)}
+.card h2{font-size:clamp(25px,4.2vw,31px);font-weight:500;letter-spacing:-.025em;line-height:1.08;margin:10px 0 8px}
+.card .dom{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+.card p{font-size:14.5px;line-height:1.55;color:var(--ink2);margin-top:12px}
+.card-foot{display:flex;justify-content:space-between;margin-top:18px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.card-foot span:first-child{color:var(--accent)}
+.card-foot span:last-child{color:var(--ink3)}
+.illus{position:absolute;right:10px;top:8px;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);background:var(--panel);border:1px solid var(--hair);padding:3px 7px;border-radius:5px}
+.deck-nav{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px;z-index:5}
+.deck-nav .count{font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--ink2);min-width:64px;text-align:center;font-variant-numeric:tabular-nums}
+
+/* mini visuals */
+.mv{height:100%;padding-top:16px;display:flex;flex-direction:column;gap:10px;font-size:11px;color:var(--ink2)}
+.mv-h{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink3)}
+.box{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:9px 11px}
+.flow{display:flex;align-items:center;gap:6px;flex-wrap:nowrap}
+.node{flex:1;text-align:center;padding:9px 4px;border-radius:9px;border:1px solid var(--hair2);background:var(--panel);font-weight:600;font-size:10.5px;color:var(--ink);white-space:nowrap}
+.node.hi{border-color:var(--accent-mid);background:var(--accent-dim);color:var(--accent)}
+.node.bad{border-style:dashed;color:var(--warn)}
+.arr{color:var(--ink3);font-size:12px}
+.tag{display:inline-block;padding:2px 7px;border-radius:5px;font-size:9.5px;font-weight:700;letter-spacing:.06em}
+.tag.ok{background:var(--ok-dim);color:var(--ok)}.tag.ac{background:var(--accent-dim);color:var(--accent)}.tag.am{background:var(--amber-dim);color:var(--amber)}
+.line{height:6px;border-radius:3px;background:var(--hair2);margin:5px 0}
+.phase{display:grid;grid-template-columns:72px repeat(6,1fr);gap:4px;align-items:center}
+.phase b{font-size:10.5px;color:var(--ink);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phase s{height:16px;border-radius:4px;background:var(--accent-dim);text-decoration:none}
+.phase s.d{background:var(--accent)}.phase s.g{background:var(--ok)}
+table.mt{width:100%;border-collapse:collapse;font-size:10.5px}
+table.mt th{text-align:left;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-weight:700;padding:5px 6px;border-bottom:1px solid var(--hair2)}
+table.mt td{padding:6px;border-bottom:1px solid var(--hair);color:var(--ink);font-family:ui-monospace,Menlo,monospace;font-size:10px}
+.bars{display:flex;align-items:flex-end;gap:6px;height:70px}
+.bars i{flex:1;border-radius:4px 4px 0 0;background:var(--accent-mid)}
+.bars i:nth-child(3n){background:var(--accent)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpis .box b{display:block;height:14px;width:60%;border-radius:4px;background:var(--ink);opacity:.8;margin-top:5px}
+.kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;flex:1}
+.kanban .col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:6px}
+.kanban .t{border:1px solid var(--hair);border-radius:7px;padding:6px;background:var(--panel2)}
+
+/* list view */
+#list{overflow-y:auto;padding:100px 28px 60px}
+.list-inner{max-width:1120px;margin:0 auto}
+.list-head{margin-bottom:34px}
+.list-head h1{font-size:clamp(34px,5vw,54px);font-weight:400;letter-spacing:-.03em;margin:12px 0 10px}
+.list-head h1 em{font-family:var(--serif);color:var(--accent)}
+.list-head p{color:var(--ink2);max-width:620px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.tile{background:var(--panel);border:1px solid var(--hair);border-radius:22px;overflow:hidden;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease);text-align:left;display:flex;flex-direction:column}
+.tile:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.tile .card-vis{height:230px;flex:none}
+.tile .card-body{padding:18px 20px 20px}
+.tile h3{font-size:21px;font-weight:500;letter-spacing:-.02em;margin:8px 0 6px}
+.tile p{font-size:13.5px;color:var(--ink2);line-height:1.5;margin-top:8px}
+
+/* drawers */
+.scrim{position:fixed;inset:0;z-index:30;background:rgba(10,15,28,.38);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:40;width:min(720px,100%);background:var(--bg);border-left:1px solid var(--hair);transform:translateX(102%);transition:transform .6s var(--ease);overflow-y:auto;overscroll-behavior:contain}
+.drawer.on{transform:none}
+.d-close{position:sticky;top:16px;float:right;margin:16px 16px 0 0;z-index:2}
+.d-inner{padding:44px 44px 70px}
+.d-inner h2{font-size:clamp(30px,4.5vw,44px);font-weight:400;letter-spacing:-.03em;line-height:1.05;margin:14px 0 10px}
+.d-inner .lead{font-size:16px;color:var(--ink2);line-height:1.6;margin-top:10px}
+.d-vis{height:260px;border:1px solid var(--hair);border-radius:20px;margin:28px 0;padding:22px;background:var(--panel2);position:relative;overflow:hidden}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}
+.fact{border:1px solid var(--hair);border-radius:14px;padding:14px;background:var(--panel)}
+.fact small{display:block;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-weight:700;margin-bottom:6px}
+.fact span{font-size:13.5px;font-weight:600;line-height:1.35}
+.sec{margin-top:30px}
+.sec-label{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.sec-label::after{content:"";flex:1;height:1px;background:var(--hair)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:0 0 16px 40px;line-height:1.6;font-size:15px;color:var(--ink2)}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1px;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.06em}
+.steps li strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:12px;padding:6px 11px;border-radius:999px;border:1px solid var(--hair2);color:var(--ink2);font-weight:500}
+
+/* about */
+.hero{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:center}
+.portrait{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:48px;color:var(--accent);background:var(--accent-dim);border:1px solid var(--accent-mid);position:relative}
+.portrait::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px dashed var(--hair2)}
+.about-name{font-size:clamp(32px,5vw,46px);font-weight:400;letter-spacing:-.03em;line-height:1}
+.about-name em{font-family:var(--serif);color:var(--accent)}
+.tagline{color:var(--ink2);margin-top:8px;font-size:14.5px;line-height:1.5}
+.creds{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.creds span{font-size:11px;font-weight:600;padding:5px 10px;border-radius:7px;background:var(--panel);border:1px solid var(--hair)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}
+.stat{border:1px solid var(--hair);border-radius:16px;padding:16px 14px;background:var(--panel)}
+.stat b{display:block;font-family:var(--serif);font-size:38px;font-weight:400;line-height:1;color:var(--accent)}
+.stat span{display:block;font-size:11.5px;color:var(--ink2);margin-top:8px;line-height:1.35}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.tl-item{border:1px solid var(--hair);border-radius:16px;background:var(--panel);margin-bottom:10px;overflow:hidden}
+.tl-head{width:100%;text-align:left;display:grid;grid-template-columns:1fr auto;gap:12px;padding:16px 18px;align-items:center}
+.tl-role{font-weight:600;font-size:15px;line-height:1.35}
+.tl-org{font-size:13px;color:var(--ink2);margin-top:3px}
+.tl-dates{font-size:11.5px;color:var(--ink3);font-weight:600;white-space:nowrap;text-align:right}
+.tl-ico{display:inline-block;margin-left:8px;transition:transform .3s;color:var(--accent)}
+.tl-item.open .tl-ico{transform:rotate(45deg)}
+.tl-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.tl-item.open .tl-body{grid-template-rows:1fr}
+.tl-body>div{overflow:hidden}
+.tl-body ul{padding:0 18px 16px 34px;color:var(--ink2);font-size:14px;line-height:1.6}
+.tl-body li{margin-bottom:7px}
+.tl-body li b{color:var(--ink);font-weight:600}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.skill{border:1px solid var(--hair);border-radius:16px;padding:16px;background:var(--panel)}
+.skill h4{font-size:13.5px;font-weight:600;margin-bottom:10px}
+.certs{display:grid;gap:8px}
+.cert{display:flex;justify-content:space-between;gap:12px;border:1px solid var(--hair);border-radius:12px;padding:12px 14px;background:var(--panel);font-size:14px;font-weight:500}
+.cert small{color:var(--ink3);font-weight:600;font-size:12px}
+.awards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.award{border:1px solid var(--amber-dim);background:var(--amber-dim);border-radius:14px;padding:14px}
+.award b{display:block;font-size:14px;font-weight:600}
+.award small{color:var(--ink2);font-size:12px}
+
+/* menu */
+.menu{position:fixed;top:72px;right:28px;z-index:25;background:var(--panel);border:1px solid var(--hair);border-radius:16px;box-shadow:var(--shadow);padding:8px;min-width:200px;opacity:0;transform:translateY(-6px);pointer-events:none;transition:all .25s var(--ease)}
+.menu.on{opacity:1;transform:none;pointer-events:auto}
+.menu a,.menu button{display:block;width:100%;text-align:left;padding:11px 14px;border-radius:10px;font-size:14px;font-weight:500}
+.menu a:hover,.menu button:hover{background:var(--accent-dim);color:var(--accent)}
+
+@media (max-width:640px){
+  .topbar{padding:14px 16px}
+  .brand small{display:none}
+  .seg button{padding:6px 10px;font-size:10px}
+  .pill-btn{padding:9px 12px}
+  #deck{padding:80px 16px 76px}
+  .deck-wrap{height:100%}
+  #list{padding:84px 16px 50px}
+  .grid{grid-template-columns:1fr}
+  .d-inner{padding:30px 16px 60px}
+  .facts{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .skills,.awards{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
+  .portrait{width:88px;height:88px;font-size:36px}
+  .menu{right:16px}
+  .node{font-size:9.5px;padding:8px 2px}
+  .d-vis{height:230px;padding:16px}
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+
+<!-- INTRO -->
+<section id="intro" aria-label="Introduction">
+  <div class="eyebrow">Banking · Insurance · Fintech SaaS</div>
+  <h1 class="intro-name"><span>Maq<em>sad</em></span><br/><span>Shaik</span></h1>
+  <div class="intro-sub">Business Analyst · from requirements to go-live</div>
+  <div class="intro-rule"></div>
+  <div class="intro-tag">5 enterprise go-lives in 5.5 years</div>
+  <div class="intro-actions">
+    <button class="btn primary" id="enter">View my work →</button>
+    <button class="btn" id="enterAbout">About me</button>
+  </div>
+</section>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="brand"><b>Maqsad Shaik</b><small>Business Analyst</small></div>
+  <div class="topbar-right">
+    <div class="seg" role="tablist" aria-label="View">
+      <button class="on" data-view="deck" role="tab">Cards</button>
+      <button data-view="list" role="tab">List</button>
+    </div>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <button class="pill-btn" id="menuBtn" aria-haspopup="true">Menu</button>
+  </div>
+</header>
+<nav class="menu" id="menu">
+  <button data-go="deck">Selected work</button>
+  <button data-go="about">About &amp; experience</button>
+  <a href="Maqsad_Shaik_Business_Analyst.pdf" target="_blank" rel="noopener">Download résumé</a>
+  <a href="mailto:maqsadshaik29@gmail.com">Email me</a>
+  <a href="https://www.linkedin.com/in/maqsad.sk" target="_blank" rel="noopener">LinkedIn</a>
+</nav>
+
+<main>
+  <section class="view" id="deck" aria-label="Selected work">
+    <div class="deck-wrap" id="deckWrap"></div>
+  </section>
+  <section class="view hidden" id="list" aria-label="All work">
+    <div class="list-inner">
+      <div class="list-head">
+        <div class="eyebrow">Selected work</div>
+        <h1>Requirements that <em>ship.</em></h1>
+        <p>Case studies from enterprise CRM and payments programmes for banks, insurers and fintech platforms, covering discovery workshops, BRDs, process design, data mapping, UAT, go-live and hypercare.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+</main>
+<div class="deck-nav" id="deckNav">
+  <button class="icon-btn" id="prevBtn" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <span class="count" id="count">01 / 06</span>
+  <button class="icon-btn" id="nextBtn" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18l6-6-6-6"/></svg></button>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="caseDrawer" aria-label="Case study"><button class="icon-btn d-close" data-close aria-label="Close">✕</button><div class="d-inner" id="caseBody"></div></aside>
+
+<aside class="drawer" id="aboutDrawer" aria-label="About">
+  <button class="icon-btn d-close" data-close aria-label="Close">✕</button>
+  <div class="d-inner">
+    <div class="hero">
+      <div class="portrait">MS</div>
+      <div>
+        <div class="about-name">Maq<em>sad</em> Shaik</div>
+        <div class="tagline">Business Analyst · Product Requirements, Prioritization &amp; Agile Delivery · BFSI, Fintech SaaS &amp; CRM</div>
+        <div class="creds"><span>B.Tech CSE · LPU</span><span>Hyderabad, India</span><span>SQL · Agile · APIs</span></div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:24px">I turn ambiguous business problems into clear product requirements and on-time releases for banks, insurers and fintech platforms. Clients know me for clear communication, practical problem solving, crisp documentation and data analysis backed by SQL.</p>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>enterprise go-lives</span></div>
+      <div class="stat"><b>5.5</b><span>years in BA &amp; implementation</span></div>
+      <div class="stat"><b>100%</b><span>release milestones on time at HighRadius</span></div>
+      <div class="stat"><b>2</b><span>awards for client impact</span></div>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="mailto:maqsadshaik29@gmail.com">Get in touch</a>
+      <a class="btn" href="Maqsad_Shaik_Business_Analyst.pdf" target="_blank" rel="noopener">Download résumé</a>
+      <a class="btn" href="https://www.linkedin.com/in/maqsad.sk" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+
+    <div class="sec"><div class="sec-label">Experience · click a role to expand</div>
+      <div class="tl-item open">
+        <button class="tl-head"><div><div class="tl-role">Consultant · Payments &amp; Order-to-Cash</div><div class="tl-org">HighRadius (Fintech SaaS), Hyderabad</div></div><div class="tl-dates">Apr 2025 – Present<span class="tl-ico">+</span></div></button>
+        <div class="tl-body"><div><ul>
+          <li><b>Launched a centralized payments portal for 2 US banks</b> (Wells Fargo, Bank of America via Fiserv), automating transaction processing and reducing manual reconciliation, by leading discovery, mapping As-Is/To-Be payment flows and writing the BRD, user stories and acceptance criteria.</li>
+          <li><b>Delivered 100% of release milestones on time</b> by prioritizing the backlog with the product owner, planning releases and tracking scope, risks, issues and dependencies in a RAID log.</li>
+          <li><b>Shipped defect-free releases with business sign-off on every one</b> by writing UAT test cases, leading SIT and UAT with business users and triaging defects with engineering.</li>
+          <li><b>Eliminated data silos between ERP, banking and finance systems</b> by designing SQL-based integrations and ETL source-to-target mappings and validating API payloads in Postman.</li>
+          <li><b>Replaced manual finance processes with automated workflows</b> by analysing current-state processes, finding improvement opportunities and specifying workflow rules with the build team.</li>
+        </ul></div></div>
+      </div>
+      <div class="tl-item">
+        <button class="tl-head"><div><div class="tl-role">Business Analyst · CRM (BFSI)</div><div class="tl-org">BusinessNext (Banking CRM), Hyderabad</div></div><div class="tl-dates">May 2021 – Apr 2025<span class="tl-ico">+</span></div></button>
+        <div class="tl-body"><div><ul>
+          <li><b>Took CRM live for 4 enterprise clients (3 banks and 1 health insurer)</b> by owning requirements from discovery workshops through go-live, user training and hypercare.</li>
+          <li><b>Authored the BRDs, FRDs/FSDs and gap analyses behind all 4 implementations</b> through requirement-elicitation workshops, As-Is/To-Be process models and solution design with the technical team.</li>
+          <li><b>Secured client sign-off on every CRM module</b> by writing UAT test cases, running UAT with business users and tracking defects to closure in Jira.</li>
+          <li><b>Kept every sprint aligned to client priorities</b> by writing user stories and acceptance criteria, prioritizing the backlog and facilitating refinement, review and retro ceremonies.</li>
+          <li><b>Reduced manual data handling</b> by defining source-to-target data mappings, configuring CRM modules and managing API and ETL integrations.</li>
+          <li><b>Gave leadership faster, data-driven decisions</b> by building BI dashboards for operational KPIs and contributing to AI-driven product initiatives.</li>
+        </ul></div></div>
+      </div>
+    </div>
+
+    <div class="sec"><div class="sec-label">Recognition</div>
+      <div class="awards">
+        <div class="award"><b>Best Client Focus</b><small>BusinessNext · 2022</small></div>
+        <div class="award"><b>Quarterly Award</b><small>BusinessNext · 2023</small></div>
+      </div>
+    </div>
+
+    <div class="sec"><div class="sec-label">Skills &amp; expertise</div>
+      <div class="skills" id="skills"></div>
+    </div>
+
+    <div class="sec"><div class="sec-label">Education &amp; certifications</div>
+      <div class="certs">
+        <div class="cert">B.Tech, Computer Science &amp; Engineering · Lovely Professional University<small>2017 – 2021</small></div>
+        <div class="cert">SQL for Business Analysts<small>2022</small></div>
+        <div class="cert">Agile Fundamentals: Scrum &amp; Kanban<small>2023</small></div>
+        <div class="cert">API and Web Service Introduction<small>2024</small></div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+const V = {
+  flow: `<div class="mv"><div class="mv-h">As-Is</div>
+    <div class="flow"><div class="node">ERP</div><span class="arr">→</span><div class="node bad">Manual recon</div><span class="arr">→</span><div class="node bad">Email / files</div><span class="arr">→</span><div class="node">Bank</div></div>
+    <div class="mv-h" style="margin-top:6px">To-Be</div>
+    <div class="flow"><div class="node">ERP</div><span class="arr">→</span><div class="node hi">Payments portal</div><span class="arr">→</span><div class="node">Fiserv</div></div>
+    <div class="flow" style="padding-left:50%"><div class="node">Wells Fargo</div><div class="node">BofA</div></div>
+    <div class="box" style="margin-top:auto;display:flex;gap:8px;align-items:center"><span class="tag ok">AUTOMATED</span> Transaction processing &amp; reconciliation</div></div>`,
+  rollout: `<div class="mv"><div class="phase"><span></span>${['Disc','BRD','Config','UAT','Live','Care'].map(x=>`<span class="mv-h" style="font-size:8.5px;letter-spacing:.04em;text-align:center">${x}</span>`).join('')}</div>
+    ${['Bank A','Bank B','Bank C','Insurer'].map(n=>`<div class="phase"><b>${n}</b><s class="d"></s><s class="d"></s><s class="d"></s><s class="d"></s><s class="g"></s><s></s></div>`).join('')}
+    <div class="box" style="margin-top:auto;display:flex;gap:8px;align-items:center"><span class="tag ok">4 / 4 LIVE</span> 3 banks · 1 health insurer</div></div>`,
+  docs: `<div class="mv"><div class="box"><div style="display:flex;justify-content:space-between"><b style="color:var(--ink);font-size:11px">BRD · Lead Management</b><span class="tag ac">v1.3 SIGNED</span></div><div class="line" style="width:90%"></div><div class="line" style="width:72%"></div><div class="line" style="width:80%"></div></div>
+    <div class="box"><span class="tag am">USER STORY</span><div style="margin-top:6px;line-height:1.5;color:var(--ink)">As a <b>relationship manager</b>, I want <b>leads auto-assigned by branch</b> so that <b>no lead goes unworked</b>.</div></div>
+    <div class="box" style="font-family:ui-monospace,Menlo,monospace;font-size:10px;line-height:1.6"><span style="color:var(--accent)">Given</span> a new lead from branch 104<br/><span style="color:var(--accent)">When</span> it is created<br/><span style="color:var(--accent)">Then</span> it is assigned to the branch RM</div></div>`,
+  uat: `<div class="mv"><div class="box" style="padding:4px 6px"><table class="mt"><tr><th>Test case</th><th>Module</th><th>Status</th></tr>
+    <tr><td>TC-014</td><td>Payments</td><td><span class="tag ok">PASS</span></td></tr>
+    <tr><td>TC-015</td><td>Approvals</td><td><span class="tag ok">PASS</span></td></tr>
+    <tr><td>TC-016</td><td>Recon</td><td><span class="tag am">RETEST</span></td></tr>
+    <tr><td>TC-017</td><td>Reports</td><td><span class="tag ok">PASS</span></td></tr></table></div>
+    <div class="box" style="display:flex;gap:8px;align-items:center;margin-top:auto"><span class="tag ok">SIGNED OFF</span> Business sign-off on every release</div></div>`,
+  mapping: `<div class="mv"><div class="mv-h">Source-to-target mapping</div><div class="box" style="padding:4px 6px"><table class="mt"><tr><th>Source (ERP)</th><th>Target</th><th>Rule</th></tr>
+    <tr><td>cust_no</td><td>customer_id</td><td>trim</td></tr>
+    <tr><td>inv_amt</td><td>amount</td><td>decimal(18,2)</td></tr>
+    <tr><td>inv_dt</td><td>invoice_date</td><td>ISO-8601</td></tr>
+    <tr><td>status_cd</td><td>status</td><td>lookup</td></tr></table></div>
+    <div class="flow" style="margin-top:auto"><div class="node">ERP</div><span class="arr">⇄</span><div class="node hi">SQL · ETL · API</div><span class="arr">⇄</span><div class="node">Finance</div></div></div>`,
+  kpi: `<div class="mv"><div class="kpis"><div class="box">Leads<b></b></div><div class="box">Conversion<b style="width:45%"></b></div><div class="box">SLA<b style="width:52%"></b></div></div>
+    <div class="box" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end"><div class="mv-h" style="margin-bottom:8px">Operational KPIs · weekly</div><div class="bars">${[40,55,48,62,58,70,66,78,74,85].map(h=>`<i style="height:${h}%"></i>`).join('')}</div></div></div>`,
+  agile: `<div class="mv"><div class="kanban">${[['Backlog',3],['In sprint',2],['Done',3]].map(([n,c],i)=>`<div class="col"><div class="mv-h">${n}</div>${Array.from({length:c},(_,k)=>`<div class="t"><div class="line" style="width:${70+((k*13)%25)}%;margin:2px 0;${i==2?'background:var(--ok-dim)':''}"></div><div class="line" style="width:45%;margin:4px 0 0"></div></div>`).join('')}</div>`).join('')}</div>
+    <div class="box" style="display:flex;gap:8px;align-items:center"><span class="tag ac">RAID</span> Risks · Assumptions · Issues · Dependencies tracked</div></div>`
+};
+
+const CASES = [
+  { id:'payments', tag:'Payments', vis:'flow', title:'Payments portal for two US banks', dom:'Fintech SaaS · Payments · O2C',
+    blurb:'A centralized payments portal for Wells Fargo and Bank of America (via Fiserv) that automates transaction processing and cuts manual reconciliation.',
+    facts:[['Company','HighRadius'],['Role','Consultant / BA'],['Timeline','2025 – present']],
+    problem:'Payment and order-to-cash processes depended on manual reconciliation and file handoffs between ERP, finance teams and bank channels.',
+    steps:[['Led product discovery','with business and finance stakeholders to understand how payments actually flowed.'],['Mapped As-Is and To-Be payment flows','to show where manual work and reconciliation gaps sat.'],['Wrote the BRD, user stories and acceptance criteria','that engineering built against.'],['Ran SIT and UAT','with business users and triaged defects with engineering through to sign-off.']],
+    outcome:'Portal launched for 2 US banks, with transaction processing automated and manual reconciliation reduced.',
+    tools:['BRD','User Stories','As-Is/To-Be','UAT','SIT','Postman','SQL']},
+  { id:'crm', tag:'CRM', vis:'rollout', title:'Four enterprise CRM go-lives', dom:'Banking · Insurance · CRM',
+    blurb:'Took CRM live for South Indian Bank, RBL Bank, ADIB and Niva Bupa, owning requirements from discovery through go-live and hypercare.',
+    facts:[['Company','BusinessNext'],['Role','Business Analyst'],['Clients','3 banks · 1 insurer']],
+    problem:'Each bank and insurer needed the CRM platform fitted to its own sales, service and lead processes, with signed-off requirements and a smooth rollout to users.',
+    steps:[['Ran discovery and requirement-elicitation workshops','with cross-functional client stakeholders.'],['Produced gap analyses','between the platform and each client\'s processes and shaped the solution with the technical team.'],['Configured CRM modules and data mappings','to the approved requirements.'],['Trained end users and supported hypercare','after go-live, resolving issues through root-cause analysis.']],
+    outcome:'All 4 implementations went live, with client sign-off on every CRM module.',
+    tools:['Workshops','Gap Analysis','Solution Design','Configuration','User Training','Hypercare']},
+  { id:'docs', tag:'Requirements', vis:'docs', title:'BRDs, FSDs and user stories', dom:'Documentation · Requirements',
+    blurb:'The requirement documents behind every implementation: BRDs, FRDs/FSDs, user stories and Given/When/Then acceptance criteria.',
+    facts:[['Artefacts','BRD · FRD · FSD'],['Scope','All 5 go-lives'],['Format','Stories + AC']],
+    problem:'Engineering, QA and the client need a single, unambiguous description of what will be built and how it will be accepted.',
+    steps:[['Elicited requirements','through workshops, interviews and walkthroughs of current processes.'],['Modelled As-Is/To-Be processes','so stakeholders could agree on the future state.'],['Wrote BRDs and FRDs/FSDs','that turned business needs into build-ready specifications.'],['Broke scope into user stories','with testable acceptance criteria for each sprint.']],
+    outcome:'Authored the BRDs, FRDs/FSDs and gap analyses behind all 4 CRM implementations and the HighRadius payments portal.',
+    tools:['BRD','FRD/FSD','User Stories','Acceptance Criteria','Process Mapping']},
+  { id:'uat', tag:'Quality', vis:'uat', title:'UAT that earns sign-off', dom:'Testing · Release',
+    blurb:'Writing UAT test cases, running SIT and UAT with business users, and tracking every defect to closure.',
+    facts:[['Tracking','Jira'],['Phases','SIT · UAT'],['Result','Sign-off every release']],
+    problem:'A release is only done when the business accepts it. Defects found late are costly and erode client trust.',
+    steps:[['Wrote UAT test cases','traced to requirements and acceptance criteria.'],['Led SIT and UAT sessions','with business users.'],['Triaged and tracked defects','with engineering in Jira until closure.'],['Coordinated sign-off','with client stakeholders before go-live.']],
+    outcome:'Defect-free releases with business sign-off on every one at HighRadius, and client sign-off on every CRM module at BusinessNext.',
+    tools:['UAT','SIT','Test Cases','Jira','Defect Triage']},
+  { id:'data', tag:'Data', vis:'mapping', title:'ERP, banking and finance integration', dom:'Data · Integration · ETL',
+    blurb:'SQL-based integrations and ETL source-to-target mappings that remove data silos between ERP, banking and finance systems.',
+    facts:[['Stack','SQL · ETL · APIs'],['Validation','Postman'],['Formats','XML · XSLT · JSON']],
+    problem:'Customer, invoice and payment data lived in separate ERP, banking and finance systems, forcing teams to reconcile by hand.',
+    steps:[['Defined source-to-target data mappings','with transformation rules for each field.'],['Designed SQL-based integrations and ETL flows','with the build team.'],['Validated API payloads in Postman','before integration testing.'],['Specified workflow rules','that replaced manual finance processes.']],
+    outcome:'Data silos between ERP, banking and finance systems removed, with better data accuracy and less manual data handling.',
+    tools:['SQL (MySQL)','ETL','Data Mapping','APIs','Postman','XML / XSLT']},
+  { id:'kpi', tag:'Analytics', vis:'kpi', title:'KPI dashboards for leadership', dom:'BI · Analytics',
+    blurb:'BI dashboards that track operational KPIs and help leadership make faster, data-driven decisions.',
+    facts:[['Tools','Power BI · Tableau'],['Data','SQL · Excel'],['Audience','Client leadership']],
+    problem:'Leadership needed timely visibility of operational performance without waiting on manual reports.',
+    steps:[['Identified the KPIs','that mattered to client leadership.'],['Prepared the data','with SQL and Advanced Excel.'],['Built dashboards','in BI tools to track operational KPIs.'],['Contributed to AI-driven product initiatives','alongside the product team.']],
+    outcome:'Leadership got faster, data-driven decisions from dashboards that track operational KPIs.',
+    tools:['Power BI','Tableau','SQL','Advanced Excel','Data Analysis']},
+  { id:'agile', tag:'Delivery', vis:'agile', title:'Agile delivery and release planning', dom:'Scrum · Kanban · RAID',
+    blurb:'Prioritizing the backlog with product owners, planning releases and running Scrum ceremonies to keep every sprint aligned to client priorities.',
+    facts:[['Method','Scrum · Kanban'],['Governance','RAID log'],['Result','100% milestones on time']],
+    problem:'With several stakeholders and moving priorities, scope, risks and dependencies have to stay visible or releases slip.',
+    steps:[['Prioritized the backlog','with the product owner, based on business value.'],['Facilitated refinement, review and retrospectives','with the delivery team.'],['Planned releases','and tracked scope against milestones.'],['Kept a RAID log','covering risks, assumptions, issues and dependencies.']],
+    outcome:'100% of release milestones delivered on time at HighRadius, with every sprint aligned to client priorities.',
+    tools:['Agile','Scrum','Kanban','Jira','RAID Log','Release Planning']},
+];
+
+const SKILLS = [
+  ['Business Analysis & Product',['Requirements Elicitation','Product Discovery','Stakeholder Management','BRD','FRD/FSD','User Stories','Acceptance Criteria','Gap Analysis','As-Is/To-Be Mapping','Solution Design','Process Improvement','UAT','SIT']],
+  ['Agile & Delivery',['Agile','Scrum','Kanban','SDLC','Jira','RAID Log','Release Planning','Risk & Dependency Mgmt','Cross-functional Collaboration']],
+  ['Data & Technical',['SQL (MySQL)','Data Analysis','KPI Dashboards','Data Mapping','Data Modeling','ETL','APIs','Postman','XML','XSLT','Power BI','Tableau','Advanced Excel']],
+  ['Domains',['Banking','Payments','Insurance (BFSI)','Fintech SaaS','Order-to-Cash','CRM','ERP']],
+];
+
+const pad = n => String(n).padStart(2,'0');
+const $ = s => document.querySelector(s);
+const total = CASES.length;
+let cur = 0;
+
+function cardInner(c,i,tile){
+  return `<div class="card-vis"><span class="illus">Illustration</span>${V[c.vis]}</div>
+  <div class="card-body"><div class="idx"><i>${c.tag}</i>${pad(i+1)}</div>
+  <${tile?'h3':'h2'}>${c.title}</${tile?'h3':'h2'}><div class="dom">${c.dom}</div><p>${c.blurb}</p>
+  ${tile?'':'<div class="card-foot"><span>Tap to open →</span><span>Swipe ⇢</span></div>'}</div>`;
+}
+// deck
+const wrap = $('#deckWrap');
+CASES.forEach((c,i)=>{const el=document.createElement('article');el.className='card';el.innerHTML=cardInner(c,i);el.onclick=()=>openCase(i);wrap.appendChild(el)});
+function layout(){
+  [...wrap.children].forEach((el,i)=>{
+    const d=i-cur; el.className='card '+(d<0?'prev':d===0?'cur':d===1?'next':d===2?'next2':'far');
+    el.setAttribute('aria-hidden',d!==0);
+  });
+  $('#count').textContent=`${pad(cur+1)} / ${pad(total)}`;
+}
+function go(d){cur=(cur+d+total)%total;layout()}
+$('#prevBtn').onclick=()=>go(-1);$('#nextBtn').onclick=()=>go(1);
+let sx=null;wrap.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+wrap.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>45){go(dx<0?1:-1)}sx=null});
+layout();
+// list
+const grid=$('#grid');
+CASES.forEach((c,i)=>{const b=document.createElement('button');b.className='tile';b.innerHTML=cardInner(c,i,true);b.onclick=()=>openCase(i);grid.appendChild(b)});
+// skills
+$('#skills').innerHTML=SKILLS.map(([h,l])=>`<div class="skill"><h4>${h}</h4><div class="chips">${l.map(x=>`<span class="chip">${x}</span>`).join('')}</div></div>`).join('');
+
+// views
+function setView(v){
+  document.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.view===v));
+  $('#deck').classList.toggle('hidden',v!=='deck');$('#list').classList.toggle('hidden',v!=='list');
+  $('#deckNav').style.display=v==='deck'?'flex':'none';
+}
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+
+// drawers
+let openDrawer=null;
+function show(d){closeAll();d.classList.add('on');$('#scrim').classList.add('on');openDrawer=d;d.scrollTop=0}
+function closeAll(){document.querySelectorAll('.drawer').forEach(d=>d.classList.remove('on'));$('#scrim').classList.remove('on');openDrawer=null}
+function openCase(i){
+  const c=CASES[i];
+  $('#caseBody').innerHTML=`<div class="idx"><i>${c.tag}</i>${pad(i+1)} / ${pad(total)}</div>
+  <h2>${c.title}</h2><div class="dom" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);font-weight:600">${c.dom}</div>
+  <p class="lead">${c.blurb}</p>
+  <div class="facts">${c.facts.map(([k,v])=>`<div class="fact"><small>${k}</small><span>${v}</span></div>`).join('')}</div>
+  <div class="d-vis"><span class="illus">Illustration</span>${V[c.vis]}</div>
+  <div class="sec"><div class="sec-label">The problem</div><p class="lead" style="margin:0">${c.problem}</p></div>
+  <div class="sec"><div class="sec-label">What I did</div><ol class="steps">${c.steps.map(([a,b])=>`<li><strong>${a}</strong> ${b}</li>`).join('')}</ol></div>
+  <div class="sec"><div class="sec-label">Outcome</div><p class="lead" style="margin:0;color:var(--ink);font-weight:500">${c.outcome}</p></div>
+  <div class="sec"><div class="sec-label">Tools &amp; techniques</div><div class="chips">${c.tools.map(t=>`<span class="chip">${t}</span>`).join('')}</div></div>
+  <div class="actions" style="margin-top:36px"><button class="btn" id="cPrev">← Previous</button><button class="btn primary" id="cNext">Next case →</button></div>`;
+  $('#cPrev').onclick=()=>{cur=(i-1+total)%total;layout();openCase(cur)};
+  $('#cNext').onclick=()=>{cur=(i+1)%total;layout();openCase(cur)};
+  show($('#caseDrawer'));
+}
+const openAbout=()=>show($('#aboutDrawer'));
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=closeAll);
+$('#scrim').onclick=closeAll;
+document.querySelectorAll('.tl-head').forEach(h=>h.onclick=()=>h.parentElement.classList.toggle('open'));
+
+// menu
+$('#menuBtn').onclick=e=>{e.stopPropagation();$('#menu').classList.toggle('on')};
+document.addEventListener('click',e=>{if(!$('#menu').contains(e.target))$('#menu').classList.remove('on')});
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{$('#menu').classList.remove('on');if(b.dataset.go==='about')openAbout();else{closeAll();setView('deck')}});
+
+// intro
+function enter(thenAbout){$('#intro').classList.add('gone');setTimeout(()=>$('#intro').remove(),950);if(thenAbout)setTimeout(openAbout,350)}
+$('#enter').onclick=()=>enter(false);$('#enterAbout').onclick=()=>enter(true);
+
+// theme
+const root=document.documentElement;
+try{const t=localStorage.getItem('ms-theme');if(t)root.dataset.theme=t}catch(e){}
+$('#themeBtn').onclick=()=>{
+  const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme=dark?'light':'dark';try{localStorage.setItem('ms-theme',root.dataset.theme)}catch(e){}
+};
+
+// keyboard
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeAll();$('#menu').classList.remove('on')}
+  if(document.getElementById('intro')&&(e.key==='Enter')){enter(false);return}
+  if(openDrawer)return;
+  if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);
+});
+</script>
+</body>
+</html>
